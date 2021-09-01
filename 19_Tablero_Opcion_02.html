@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejemplo Tablero</title>
+</head>
+
+<body>
+    <script>
+        let numero_lineas = parseInt(prompt("Elige el número de lineas"));   // Solicita tamaño del tablero
+        let par = "X"; // Define la variable par
+        let impar = "0"; // Define la variable impar
+        let resultado_linea1 = "";  // Define contenido de las lineas impares
+        let resultado_linea2 = "";  // Define contenido de las lineas pares
+
+        // Genera las lineas impares "XOXOXOXO..."
+        for (let i = 1; i <= numero_lineas; i = i + 1) {
+          
+            if (i % 2 == 0){
+                resultado_linea1 = resultado_linea1 + par
+            }
+            else {
+                resultado_linea1 = resultado_linea1 + impar            
+            }
+        }
+
+        // Genera las lineas pares "OXOXOXOX..."
+        for (let j = 2; j <= numero_lineas+1; j = j + 1) {
+          
+            if (j % 2 == 0){
+                resultado_linea2 = resultado_linea2 + par
+            }
+            else {
+              resultado_linea2 = resultado_linea2 + impar            
+            }
+        }
+        
+        // Genera el tablero, alternando las lineas impares "XOXOXOXO..." y las pares "OXOXOXOX..."
+        for (let k = 1; k <= numero_lineas; k = k + 1) {
+            if (k % 2 == 0){
+                console.log(resultado_linea1);
+            }
+            else {
+                console.log(resultado_linea2);           
+            }
+        }
+
+     </script>
+</body>
+
+</html>
