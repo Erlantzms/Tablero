@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejemplo Tablero</title>
+</head>
+
+<body>
+    <script>
+        let numero_lineas = parseInt(prompt("Elige el número de lineas"));    
+        let bloqueImpar = "";
+        let bloquePar = "";
+        let num_bloque1 = 1
+        let num_bloque2 = 1
+
+        do {
+            bloqueImpar = bloqueImpar + "XO"
+            num_bloque1 = num_bloque1 + 1;
+        }  while (num_bloque1 <= (numero_lineas/2));
+  
+
+        do {
+            bloquePar = bloquePar + "OX"
+            num_bloque2 = num_bloque2 + 1;
+        }  while (num_bloque2 <= (numero_lineas/2));
+
+
+        for (let i = 1; i <= numero_lineas; i = i + 1) {
+            if (i % 2 == 0){
+                console.log(bloqueImpar);
+            }
+            else {
+                console.log(bloquePar);           
+            }
+        }
+
+    </script>
+</body>
+
+</html>
